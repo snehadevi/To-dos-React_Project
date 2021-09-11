@@ -70,15 +70,20 @@ export function getUser(id) {
 }
 
 export function saveUser(user) {
-  let userinfo = users.find((u) => u._id === user.id) || {};
+  console.log(user._id);
+  let userinfo = users.find((u) => u._id === user._id) || {};
   userinfo.name = user.name;
   userinfo.email = user.email;
   userinfo.todo = user.todo;
+  console.log(userinfo._id, "userinfo");
 
   if (!userinfo._id) {
+    console.log("hi");
     userinfo._id = Date.now().toString();
     users.push(userinfo);
   }
+
+  return userinfo;
 }
 
 export function deleteMovie(id) {

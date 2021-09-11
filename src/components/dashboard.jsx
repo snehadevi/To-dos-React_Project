@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { getUsers } from "../FakeUsersDatabase";
+import "../css/dashboard.css";
 
 function DashBoard() {
   //const users_list = getUsers();

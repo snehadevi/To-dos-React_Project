@@ -1,0 +1,55 @@
+a:link,
+a:visited {
+  background-color: white;
+  color: black;
+  border: 2px solid green;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+a:hover,
+a:active {
+  background-color: green;
+  color: white;
+}
+
+table a:link,
+a:visited {
+  background-color: white;
+  color: black;
+  border: 2px solid rgb(66, 110, 124);
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+table a:hover,
+a:active {
+  background-color: rgb(66, 110, 124);
+  color: white;
+}
+table {
+  position: relative;
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 35px;
+}
+
+th {
+  border: 1px solid rgb(66, 110, 124);
+}
+
+td {
+  border: 1px solid rgb(66, 110, 124);
+  border-collapse: collapse;
+  background-color: #eae4ed;
+}
+
+th {
+  height: 50px;
+  background-color: #40194f;
+  color: white;
+}

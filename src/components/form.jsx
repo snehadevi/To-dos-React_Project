@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { getUser } from "../FakeUsersDatabase";
+import { getUser, saveUser } from "../FakeUsersDatabase";
 
 function TodoForm({ match, history }) {
   //console.log(match);
@@ -22,7 +22,9 @@ function TodoForm({ match, history }) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    saveUser(state);
     console.log("Submitted");
+    history.push("/dashboard");
   };
 
   useEffect(() => {
