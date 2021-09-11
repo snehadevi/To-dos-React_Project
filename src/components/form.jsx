@@ -1,6 +1,9 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import { getUser } from "../FakeUsersDatabase";
 
-function TodoForm() {
+function TodoForm({ match, history }) {
+  //console.log(match);
+  //console.log(history);
   const [state, setState] = useState({
     name: "",
     email: "",
@@ -21,6 +24,18 @@ function TodoForm() {
     e.preventDefault();
     console.log("Submitted");
   };
+
+  useEffect(() => {
+    const userId = match.params.id;
+    //console.log(userId);
+
+    if (userId === "new_form") return;
+
+    const user = getUser(userId);
+    if (!user) return history.replace("/not_found");
+
+    setState(user);
+  }, []);
 
   return (
     <form onSubmit={handleSubmit}>

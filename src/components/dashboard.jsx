@@ -1,34 +1,46 @@
 import React, { useState } from "react";
-import { Link, Route } from "react-router-dom";
+import { Link } from "react-router-dom";
+import { getUsers } from "../FakeUsersDatabase";
 
 function DashBoard() {
+  //const users_list = getUsers();
+  const [users, setusers] = useState(getUsers());
+
+  const handleDelete = (user) => {
+    //console.log("delete clicked", user);
+    const new_users = users.filter((u) => u._id !== user._id);
+    setusers(new_users);
+  };
+
   return (
     <React.Fragment>
       <div>
-        <Link to="/new_form">Create New User</Link>
+        <Link to="/dashboard/new_form">Create New User</Link>
         <table>
-          <tr>
-            <th>User Name</th>
-            <th>Email</th>
-            <th>To-dos</th>
-            <th></th>
-          </tr>
-          <tr>
-            <td>Alfreds Futterkiste</td>
-            <td>Maria Anders</td>
-            <td>Germany</td>
-            <td>
-              <button type="button">Delete</button>
-            </td>
-          </tr>
-          <tr>
-            <td>Centro comercial Moctezuma</td>
-            <td>Francisco Chang</td>
-            <td>Mexico</td>
-            <td>
-              <button type="button">Delete</button>
-            </td>
-          </tr>
+          <thead>
+            <tr>
+              <th>User Name</th>
+              <th>Email</th>
+              <th>To-dos</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody>
+            {users.map((user) => (
+              <tr key={user._id}>
+                <td>
+                  {<Link to={`/dashboard/${user._id}`}>{user.name}</Link>}
+                </td>
+                <td>{user.email}</td>
+                <td>{user.todo}</td>
+                <td>
+                  <button type="button" onClick={() => handleDelete(user)}>
+                    Delete
+                  </button>
+                </td>
+              </tr>
+            ))}
+          </tbody>
         </table>
       </div>
     </React.Fragment>
