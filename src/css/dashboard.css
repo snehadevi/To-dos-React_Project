@@ -1,5 +1,44 @@
-a:link,
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+table {
+  width: 100%;
+  height: 20vh;
+  margin-top: 35px;
+  border-collapse: collapse;
+  box-shadow: 0 5px 10px #e1e5ee;
+  background-color: white;
+  text-align: left;
+  overflow: hidden;
+}
+
+thead {
+  box-shadow: 0 5px 10px #e1e5ee;
+}
+
+th {
+  padding: 1rem 2rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  font-size: 0.9rem;
+  font-weight: 900;
+}
+
+td {
+  padding: 1rem 2rem;
+}
+
+.dashboard table a:link {
+  text-decoration: none;
+  color: #2962ff;
+}
+
+.create a:link,
 a:visited {
+  margin-top: 10px;
   background-color: white;
   color: black;
   border: 2px solid green;
@@ -9,47 +48,24 @@ a:visited {
   display: inline-block;
 }
 
-a:hover,
+.create a:hover,
 a:active {
   background-color: green;
   color: white;
 }
 
-table a:link,
-a:visited {
-  background-color: white;
-  color: black;
-  border: 2px solid rgb(66, 110, 124);
-  padding: 10px 20px;
+.dashboard button {
+  background-color: #ffcdd2; /* Green */
+  border: none;
+  color: #c62828;
+  padding: 0.2rem 1rem;
   text-align: center;
   text-decoration: none;
   display: inline-block;
+  font-size: 16px;
+  border-radius: 0.2rem;
 }
 
-table a:hover,
-a:active {
-  background-color: rgb(66, 110, 124);
-  color: white;
-}
-table {
-  position: relative;
-  width: 100%;
-  border-collapse: collapse;
-  margin-top: 35px;
-}
-
-th {
-  border: 1px solid rgb(66, 110, 124);
-}
-
-td {
-  border: 1px solid rgb(66, 110, 124);
-  border-collapse: collapse;
-  background-color: #eae4ed;
-}
-
-th {
-  height: 50px;
-  background-color: #40194f;
-  color: white;
+tr:nth-child(even) {
+  background-color: #f4f6fb;
 }

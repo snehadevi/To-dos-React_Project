@@ -14,9 +14,11 @@ function DashBoard() {
   };
 
   return (
-    <React.Fragment>
+    <div className="dashboard">
       <div>
-        <Link to="/dashboard/new_form">Create New User</Link>
+        <div className="create">
+          <Link to="/dashboard/new_form">Create New To-Do</Link>
+        </div>
         <table>
           <thead>
             <tr>
@@ -44,7 +46,7 @@ function DashBoard() {
           </tbody>
         </table>
       </div>
-    </React.Fragment>
+    </div>
   );
 }
 
