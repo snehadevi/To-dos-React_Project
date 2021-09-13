@@ -85,9 +85,3 @@ export function saveUser(user) {
 
   return userinfo;
 }
-
-export function deleteMovie(id) {
-  let userinfo = users.find((u) => u._id === id);
-  users.splice(users.indexOf(userinfo), 1);
-  return userinfo;
-}
