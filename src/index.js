@@ -2,8 +2,6 @@ import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
 import reportWebVitals from "./reportWebVitals";
-import DashBoard from "./components/dashboard";
-import TodoForm from "./components/form";
 import { BrowserRouter } from "react-router-dom";
 import App from "./App";
 

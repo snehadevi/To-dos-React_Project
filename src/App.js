@@ -1,9 +1,9 @@
 import logo from "./logo.svg";
 import "./App.css";
 import { Route, Redirect, Switch } from "react-router-dom";
-import DashBoard from "./components/dashboard";
-import TodoForm from "./components/form";
-import NotFound from "./components/notFound";
+import DashBoard from "./components/DashBoard";
+import TodoForm from "./components/TodoForm";
+import NotFound from "./components/NotFound";
 
 function App() {
   return (

@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { getUsers } from "../FakeUsersDatabase";
 import "../css/dashboard.css";
+import { FaEdit } from "react-icons/fa";
 
 function DashBoard() {
   //const users_list = getUsers();
@@ -32,7 +33,11 @@ function DashBoard() {
             {users.map((user) => (
               <tr key={user._id}>
                 <td>
-                  {<Link to={`/dashboard/${user._id}`}>{user.name}</Link>}
+                  {
+                    <Link to={`/dashboard/${user._id}`}>
+                      {user.name} <FaEdit />{" "}
+                    </Link>
+                  }
                 </td>
                 <td>{user.email}</td>
                 <td>{user.todo}</td>

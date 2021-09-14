@@ -49,6 +49,7 @@ function TodoForm({ match, history }) {
           </div>
           <div className="col-75">
             <input
+              required
               placeholder="Enter Name"
               autoFocus
               type="text"
@@ -66,9 +67,10 @@ function TodoForm({ match, history }) {
           </div>
           <div className="col-75">
             <input
+              required
               placeholder="Enter Email"
               autoFocus
-              type="text"
+              type="email"
               id="email"
               name="email"
               value={state.email}
@@ -82,6 +84,7 @@ function TodoForm({ match, history }) {
           </div>
           <div className="col-75">
             <textarea
+              required
               placeholder="Write To-do...."
               style={{ height: 200 }}
               autoFocus
