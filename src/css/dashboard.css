@@ -5,7 +5,9 @@
 }
 
 table {
-  width: 100%;
+  width: 80%;
+  margin-left: 10%;
+  margin-right: 10%;
   height: 20vh;
   margin-top: 35px;
   border-collapse: collapse;
@@ -16,6 +18,8 @@ table {
 }
 
 thead {
+  color: white;
+  background-color: #805ce4;
   box-shadow: 0 5px 10px #e1e5ee;
 }
 
@@ -28,6 +32,7 @@ th {
 }
 
 td {
+  color: rgb(111, 88, 211);
   padding: 1rem 2rem;
 }
 
@@ -41,7 +46,7 @@ a:visited {
   margin-top: 10px;
   background-color: white;
   color: #2962ff;
-  border: 2px solid green;
+  border: 2px solid #805ce4;
   padding: 10px 20px;
   text-align: center;
   text-decoration: none;
@@ -50,7 +55,7 @@ a:visited {
 
 .create a:hover,
 a:active {
-  background-color: green;
+  background-color: #805ce4;
   color: white;
 }
 
@@ -72,20 +77,4 @@ a:active {
 
 tr:nth-child(even) {
   background-color: #f4f6fb;
-}
-
-.create button {
-  margin-top: 10px;
-  background-color: white;
-  color: #2962ff;
-  border: 2px solid green;
-  padding: 10px 20px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-}
-
-.create button:hover {
-  background-color: green;
-  color: white;
 }
