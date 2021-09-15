@@ -1,4 +1,4 @@
-const users = [
+export const Users = [
   {
     _id: "266c0408e4ad170a02a2d6f63763f4",
     name: "Istiak Shihab",
@@ -61,27 +61,27 @@ const users = [
   },
 ];
 
-export function getUsers() {
-  return users;
-}
+// export function getUsers() {
+//   return users;
+// }
 
-export function getUser(id) {
-  return users.find((u) => u._id === id);
-}
+// export function getUser(id) {
+//   return users.find((u) => u._id === id);
+// }
 
-export function saveUser(user) {
-  console.log(user._id);
-  let userinfo = users.find((u) => u._id === user._id) || {};
-  userinfo.name = user.name;
-  userinfo.email = user.email;
-  userinfo.todo = user.todo;
-  console.log(userinfo._id, "userinfo");
+// export function saveUser(user) {
+//   console.log(user._id);
+//   let userinfo = users.find((u) => u._id === user._id) || {};
+//   userinfo.name = user.name;
+//   userinfo.email = user.email;
+//   userinfo.todo = user.todo;
+//   console.log(userinfo._id, "userinfo");
 
-  if (!userinfo._id) {
-    console.log("hello world!");
-    userinfo._id = Date.now().toString();
-    users.push(userinfo);
-  }
+//   if (!userinfo._id) {
+//     console.log("hello world!");
+//     userinfo._id = Date.now().toString();
+//     users.push(userinfo);
+//   }
 
-  return userinfo;
-}
+//   return userinfo;
+// }

@@ -1,15 +1,38 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import { getUser, saveUser } from "../FakeUsersDatabase";
 import "../css/form.css";
+import { Context } from "../context/Context";
 
 function TodoForm({ match, history }) {
   //console.log(match);
   //console.log(history);
+  const { users } = useContext(Context);
   const [state, setState] = useState({
     name: "",
     email: "",
     todo: "",
   });
+
+  const getUser = (id) => {
+    return users.find((u) => u._id === id);
+  };
+
+  const saveUser = (user) => {
+    //console.log(user._id);
+    let userinfo = users.find((u) => u._id === user._id) || {};
+    userinfo.name = user.name;
+    userinfo.email = user.email;
+    userinfo.todo = user.todo;
+    //console.log(userinfo._id, "userinfo");
+
+    if (!userinfo._id) {
+      //console.log("hello world!");
+      userinfo._id = Date.now().toString();
+      users.push(userinfo);
+    }
+
+    return userinfo;
+  };
 
   const handleChange = (e) => {
     //console.log(e);

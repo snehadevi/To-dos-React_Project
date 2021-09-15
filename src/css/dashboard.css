@@ -73,3 +73,19 @@ a:active {
 tr:nth-child(even) {
   background-color: #f4f6fb;
 }
+
+.create button {
+  margin-top: 10px;
+  background-color: white;
+  color: #2962ff;
+  border: 2px solid green;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.create button:hover {
+  background-color: green;
+  color: white;
+}

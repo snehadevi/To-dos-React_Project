@@ -1,12 +1,13 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import { Link } from "react-router-dom";
 import { getUsers } from "../FakeUsersDatabase";
 import "../css/dashboard.css";
 import { FaEdit } from "react-icons/fa";
+import { Context } from "../context/Context";
 
 function DashBoard() {
-  //const users_list = getUsers();
-  const [users, setusers] = useState(getUsers());
+  //const [users, setusers] = useState(getUsers());
+  const { users, setusers } = useContext(Context);
 
   const handleDelete = (user) => {
     //console.log("delete clicked", user);
