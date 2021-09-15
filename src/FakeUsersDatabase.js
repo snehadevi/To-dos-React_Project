@@ -78,7 +78,7 @@ export function saveUser(user) {
   console.log(userinfo._id, "userinfo");
 
   if (!userinfo._id) {
-    console.log("hi");
+    console.log("hello world!");
     userinfo._id = Date.now().toString();
     users.push(userinfo);
   }
