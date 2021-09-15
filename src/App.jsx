@@ -6,21 +6,11 @@ import NotFound from "./components/NotFound";
 import { Context } from "./context/Context";
 import { Users } from "./FakeUsersDatabase";
 import { useState } from "react";
+import Routing from "./components/Routing";
 function App() {
-  const [users, setusers] = useState(Users);
   return (
     <div className="App">
-      <Context.Provider value={{ users, setusers }}>
-        <div>
-          <Switch>
-            <Route path="/dashboard/:id" component={TodoForm} />
-            <Route path="/dashboard" component={DashBoard} />
-            <Route path="/not_found" component={NotFound} />
-            <Redirect from="/" exact to="/dashboard" />
-            <Redirect to="/not_found" />
-          </Switch>
-        </div>
-      </Context.Provider>
+      <Routing />
     </div>
   );
 }
